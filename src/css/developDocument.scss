@@ -1,0 +1,194 @@
+@charset "utf-8"; //解决中文注释报错
+body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.developDocument{
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.contentDocument {
+  height: 100%;
+  width: 102%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.leftNav {
+  display: inline-block;
+  height: 100% !important;
+  background: rgb(239, 239, 239);
+  .ivu-menu-submenu-title {
+    &:hover {
+      background-color: rgb(212, 212, 216);
+    }
+  }
+  .ivu-menu-item {
+    &:hover {
+      background-color: rgb(212, 212, 216);
+    }
+  }
+  .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+    border-right: 0px solid rgb(212, 212, 216);
+    color: #495060;
+  }
+  .leftContent {
+    background-color: rgb(239, 239, 239);
+    padding-top: 20px;
+    .changeColor {
+      background-color: red;
+    }
+    .ivu-icon {
+      &:before {
+        display: none
+      }
+    }
+  }
+  a {
+    color: #495060;
+  }
+  .device {
+    padding-left: 16px;
+  }
+}
+
+// 右边内容部分
+.contentDocument {
+  padding: 0 50px 10px 40px;
+  pre{
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .rightDocument {
+    h1 {
+      font-size: 26px;
+      padding-top: 40px;
+      padding-bottom: 25px;
+      color: black;
+    }
+    p,
+    li {
+      font-size: 16px;
+      line-height: 30px;
+    }
+    table {
+      margin-bottom: 20px;
+      text-align: center;
+      vertical-align: middle;
+      td,
+      th {
+        border: 1px solid black;
+        // height: 40px;
+        line-height: 40px;
+        padding: 10px;
+      }
+      .infoLeft{
+        text-align: left
+      }
+      .infoCenter{
+        vertical-align: middle;
+      }
+    }
+    .chart {
+      height: 400px;
+      background: url("../images/document.png") no-repeat;
+    }
+    .activation{
+      background: url('../images/activation1.png') no-repeat;
+      height: 540px;
+    }
+    .identifi{
+      background: url('../images/activation2.png') no-repeat;
+      height: 540px;
+    }
+  } // 文档介绍部分
+  .introdection {
+    table {
+      text-align: left;
+      tr {
+        td,
+        th {
+          padding-left: 10px;
+          width: 150px;
+          &:first-child {
+            border-left: 0px;
+          }
+          &:nth-last-child(1) {
+            width: 300px;
+            border-right: 0px;
+          }
+        }
+      }
+    }
+  } //平台提供API接口
+  .platform,
+  .infor,
+  {
+    table {
+      text-align: center;
+      margin-bottom: 20px;
+      th,
+      td {
+        padding: 10px;
+      }
+    }
+  }
+  .enclosure {
+    table {
+      th,
+      td {
+        padding: 20px;
+        // width: 80px
+        input {
+          border: 0;
+          width: 80px;
+          display: none;
+        }
+      }
+    }
+  }
+  // 设备对接规范-协议部分
+  .gain{
+    .rightTable{
+      text-align: left;
+      tr{
+        td{
+          &:nth-child(1){
+            width: 120px;
+          }
+        }
+      }
+    }
+    .equip{
+      background: url('../images/equi.png') no-repeat;
+      height: 320px;
+    }
+  }
+  .storage{
+    div{
+      font-size: 15px;
+      margin-top: 20px;
+      margin-left: 40px;
+      span{
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      img{
+        width: 20px;
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+

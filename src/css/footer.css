@@ -1,0 +1,43 @@
+.footer{
+    background:#24293e;
+    width: 100%;
+    color: #95979d;
+}
+.footer .bottom{
+    border-top: 0.01rem solid #505465;
+    font-size: 12px;
+    display: flex;
+}
+.footer .one {
+   width: 50%;
+   height: 200px;
+   border-right: 0.01rem solid #505465;
+}
+.footer .two {
+    width: 50%;
+    height: 200px;
+ }
+ .footer .one li a:hover {
+    color: #1196FD;
+ }
+ .footer .two li a:hover {
+    color: #1196FD;
+ }
+ .footer .one,.footer .two{
+     display: flex;
+     box-sizing: border-box;
+ }
+ .one li{
+     margin-top:1rem;
+ }
+.two li{
+    margin-top:1rem;
+}
+.footer .one ul{
+    margin-left:75%;
+    margin-top: 50px;
+ }
+ .footer .two ul{
+    margin: 50px auto;
+    margin-left:15%;
+}

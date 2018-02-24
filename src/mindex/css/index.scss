@@ -1,0 +1,43 @@
+*{   
+    -webkit-touch-callout:none;  /*系统默认菜单被禁用*/   
+    -webkit-user-select:none; /*webkit浏览器*/   
+    -khtml-user-select:none; /*早期浏览器*/   
+    -moz-user-select:none;/*火狐*/   
+    -ms-user-select:none; /*IE10*/   
+    user-select:none;   
+}
+html,body{
+  background: #fff;
+}
+.mindex{
+  a{
+    color: #495060;
+  }
+  .logo{
+    height: 23px;
+  }
+  .ivu-menu{
+    height: 100%;
+    overflow: scroll;
+  }
+  .mint-swipe{
+    height: 300px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.mindex .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
+  color: #495060;
+  border: none;
+}
+.mint-header{
+  height: 50px;
+  background-color: #fff;
+}
+.mint-popup-3{
+  width: 100%;
+  height: 100%;
+}

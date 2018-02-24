@@ -1,0 +1,130 @@
+body {
+  box-sizing: border-box;
+  height: 100%; }
+
+.developDocument {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%; }
+
+.box {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+.contentDocument {
+  height: 100%;
+  width: 102%;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+.leftNav {
+  overflow-y: auto;
+  display: inline-block;
+  height: 100% !important;
+  background: #efefef; }
+  .leftNav .ivu-menu-submenu-title:hover {
+    background-color: #d4d4d8; }
+  .leftNav .ivu-menu-item:hover {
+    background-color: #d4d4d8; }
+  .leftNav .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+    border-right: 0px solid #d4d4d8;
+    color: #495060; }
+  .leftNav .leftContent {
+    background-color: #efefef;
+    padding-top: 20px; }
+    .leftNav .leftContent .changeColor {
+      background-color: red; }
+    .leftNav .leftContent .ivu-icon:before {
+      display: none; }
+  .leftNav a {
+    color: #495060; }
+  .leftNav .device {
+    padding-left: 16px; }
+
+.contentDocument {
+  padding: 0 50px 10px 40px; }
+  .contentDocument pre {
+    font-size: 18px;
+    line-height: 28px; }
+  .contentDocument .rightDocument h1 {
+    font-size: 26px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    color: black; }
+  .contentDocument .rightDocument p,
+  .contentDocument .rightDocument li {
+    font-size: 16px;
+    line-height: 30px; }
+  .contentDocument .rightDocument table {
+    margin-bottom: 20px;
+    text-align: center;
+    vertical-align: middle; }
+    .contentDocument .rightDocument table td,
+    .contentDocument .rightDocument table th {
+      border: 1px solid black;
+      line-height: 40px;
+      padding: 10px; }
+    .contentDocument .rightDocument table .infoLeft {
+      text-align: left; }
+    .contentDocument .rightDocument table .infoCenter {
+      vertical-align: middle; }
+  .contentDocument .rightDocument .chart {
+    height: 400px;
+    background: url("../images/document.png") no-repeat; }
+  .contentDocument .rightDocument .activation {
+    background: url("../images/activation1.png") no-repeat;
+    height: 540px; }
+  .contentDocument .rightDocument .identifi {
+    background: url("../images/activation2.png") no-repeat;
+    height: 540px; }
+  .contentDocument .introdection table {
+    text-align: left; }
+    .contentDocument .introdection table tr td,
+    .contentDocument .introdection table tr th {
+      padding-left: 10px;
+      width: 150px; }
+      .contentDocument .introdection table tr td:first-child,
+      .contentDocument .introdection table tr th:first-child {
+        border-left: 0px; }
+      .contentDocument .introdection table tr td:nth-last-child(1),
+      .contentDocument .introdection table tr th:nth-last-child(1) {
+        width: 300px;
+        border-right: 0px; }
+  .contentDocument .platform table,
+  .contentDocument .infor table {
+    text-align: center;
+    margin-bottom: 20px; }
+    .contentDocument .platform table th,
+    .contentDocument .platform table td,
+    .contentDocument .infor table th,
+    .contentDocument .infor table td {
+      padding: 10px; }
+  .contentDocument .enclosure table th,
+  .contentDocument .enclosure table td {
+    padding: 20px; }
+    .contentDocument .enclosure table th input,
+    .contentDocument .enclosure table td input {
+      border: 0;
+      width: 80px;
+      display: none; }
+  .contentDocument .gain .rightTable {
+    text-align: left; }
+    .contentDocument .gain .rightTable tr td:nth-child(1) {
+      width: 120px; }
+  .contentDocument .gain .equip {
+    background: url("../images/equi.png") no-repeat;
+    height: 320px; }
+  .contentDocument .storage div {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 40px; }
+    .contentDocument .storage div span {
+      color: black;
+      font-size: 18px;
+      font-weight: bold; }
+    .contentDocument .storage div img {
+      width: 20px;
+      margin-right: 6px; }
+
+/*# sourceMappingURL=developDocument.css.map */
