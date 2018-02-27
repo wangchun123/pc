@@ -1,7 +1,7 @@
 <template>
   <mt-header>
     <router-link to="/" slot="left">
-      <img src="../../images/logo.jpg" alt="" class="logo">
+      <img src="../../images/logo.jpg" alt="" class="logo" @click='home'>
     </router-link>
     <mt-button slot="right" @click="handle">
      <Icon :type="icon" :size='size' :color='color'> </Icon>
@@ -31,6 +31,9 @@
     methods: {
      handle(){
       this.$emit('handle')
+     },
+     home(){
+      this.$emit('home')
      }
     },
   };

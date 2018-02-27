@@ -1,73 +1,59 @@
 <template>
-  <div class="wrapper">
-    <Row>
-        <Col span="24">
-          <div class="banner" :style='banner'></div>
-        </Col>
-    </Row>
-     <Row>
-        <Col span='24'>
-          <div class="floor">
-            <div class="title">背景需求</div>
-            <ul class="baseRow extra demand-exp">
-              <li v-for='(item,index) in demand' :style='item'></li>
-            </ul>
+  <div>
+    <mt-swipe :show-indicators="false" :auto="0">
+      <mt-swipe-item v-for='(items,i) in banner' :style="items"></mt-swipe-item>
+    </mt-swipe>
+    <div class="mfloor">
+      <div class="title">背景需求</div>
+      <p>
+        “智慧城市”是信息化和城市化深度融合的必然结果，是在新一代信息技术和知识经济加速发展的背景下，以智慧基础设施为支撑，以信息技术高度集成，信息资源深度开发和应用智慧化为主要特征，以智慧产业、智慧服务、智慧管理、智慧生活等为重要内容的城市发展新模式。政府希望打造智慧城市，让市民充分享受到无线网络带来的便利生活。
+      </p>
+    </div>
+    <div class="mimg" :style='img'></div>
+    <div class="mfloor">
+        <div class="title">产品功能</div>
+        <div class="item">
+          <img src="../../../../images/mindex/city/j1.png" alt="">
+          <div class="chapter">
+            <div class="title">互通</div>
+            <p>城市互联互通、应用丰富</p>
           </div>
-        </Col>
-    </Row>
-    <Row>
-        <Col span="24">
-            <div class="scheme" :style='scheme'>
-              <div class="title">方案概述</div>
-            </div>
-        </Col>
-    </Row>
-    <Row>
-        <Col span='24'>
-          <div class="floor">
-            <div class="title">方案亮点</div>
-            <ul class="baseRow bright">
-              <li v-for='(item,index) in bright' :style='item'></li>
-            </ul>
+        </div>
+        <div class="item">
+          <img src="../../../../images/mindex/city/j2.png" alt="">
+          <div class="chapter">
+            <div class="title">共享</div>
+            <p>通过众筹共建共享模式，降低政府及企业投入资本</p>
           </div>
-        </Col>
-    </Row>
-    <Row>
-        <Col span='24'>
-          <div class="floor" style="background-color:#F0F0F0">
-            <div class="title">成功案例</div>
-            <ul class="baseRow extra example">
-              <li v-for='(item,index) in example' :style='item'></li>
-            </ul>
+        </div>
+        <div class="item">
+          <img src="../../../../images/mindex/city/j3.png" alt="">
+          <div class="chapter">
+            <div class="title">PUSH</div>
+            <p>双SSID模式，符合政府智慧城市建设要求，满足政务、商务信息交互充分等，也符合运营商WiFi后向运营商业价值探索以及基础大数据收集</p>
           </div>
-        </Col>
-    </Row>
+        </div>
+    </div>
+    <div class="mfloor">
+      <div class="title">成功案例</div>
+      <ul class="mcasus square">
+        <img v-for="(items,i) in casus" :src="items.backgroundImage">
+      </ul>
+    </div>
   </div>
 </template>
-<style lang="scss">
-@import '../../../css/solution.scss'
-</style>
 <script>
   export default{
     components: {
     },
     data(){
       return {
-        banner:{backgroundImage:'url(' + require('../../../images/city/banner.jpg') + ')'},
-        scheme:{backgroundImage:'url(' + require('../../../images/city/scheme.jpg') + ')'},
-        demand:[
-          {backgroundImage:'url(' + require('../../../images/city/e1.png') + ')'},
-          {backgroundImage:'url(' + require('../../../images/city/e2.png') + ')'}
-        ],
-        bright:[
-          {backgroundImage:'url(' + require('../../../images/city/c1.png') + ')'},
-          {backgroundImage:'url(' + require('../../../images/city/c2.png') + ')'},
-          {backgroundImage:'url(' + require('../../../images/city/c3.png') + ')'}
-        ],
-        example:[
-          {backgroundImage:'url(' + require('../../../images/city/d1.jpg') + ')'},
-          {backgroundImage:'url(' + require('../../../images/city/d2.jpg') + ')'}
-        ]
+        banner:[{backgroundImage:'url(' + require('../../../../images/mindex/city/banner.jpg') + ')'}],
+        img:{backgroundImage:'url(' + require('../../../../images/mindex/city/b1.jpg') + ')'},
+        casus:[
+            {backgroundImage:require('../../../../images/mindex/city/c1.png')},
+            {backgroundImage:require('../../../../images/mindex/city/c2.png')},
+         ],
       }
     },
     methods:{

@@ -1,79 +1,59 @@
 <template>
-  <div class="wrapper">
-    <Row>
-        <Col span="24">
-          <div class="banner" :style='banner'></div>
-        </Col>
-    </Row>
-     <Row>
-        <Col span='24'>
-          <div class="floor">
-            <div class="title">行业需求</div>
-            <ul class="baseRow demand">
-              <li v-for='(item,index) in demand' :style='item'></li>
-            </ul>
+  <div>
+    <mt-swipe :show-indicators="false" :auto="0">
+      <mt-swipe-item v-for='(items,i) in banner' :style="items"></mt-swipe-item>
+    </mt-swipe>
+    <div class="mfloor">
+      <div class="title">行业需求</div>
+      <div class="mdemand">
+        <img v-for="(items,i) in mdemand" :src="items.backgroundImage">
+      </div>
+    </div>
+    <div class="mimg" :style='img'></div>
+    <div class="mfloor">
+        <div class="title">方案亮点</div>
+        <div class="item" v-for="(items,i) in list">
+          <img :src="items.backgroundImage" alt="">
+          <div class="chapter">
+            <div class="title">{{items.title}}</div>
+            <p v-for='(item,z) in items.content'>{{item}}</p>
           </div>
-        </Col>
-    </Row>
-    <Row>
-        <Col span="24">
-            <div class="scheme" :style='scheme'>
-              <div class="title">解决方案</div>
-            </div>
-        </Col>
-    </Row>
-    <Row>
-        <Col span='24'>
-          <div class="floor">
-            <div class="title">方案亮点</div>
-            <ul class="baseRow bright">
-              <li v-for='(item,index) in bright' :style='item'></li>
-            </ul>
-          </div>
-        </Col>
-    </Row>
-    <Row>
-        <Col span='24'>
-          <div class="floor" style="background-color:#F0F0F0">
-            <div class="title">成功案例</div>
-            <ul class="baseRow example">
-              <li v-for='(item,index) in example' :style='item'></li>
-            </ul>
-          </div>
-        </Col>
-    </Row>
+        </div>
+    </div>
+    <div class="mfloor">
+      <div class="title">成功案例</div>
+      <ul class="mcasus square">
+        <img v-for="(items,i) in casus" :src="items.backgroundImage">
+      </ul>
+    </div>
   </div>
 </template>
-<style lang="scss">
-@import '../../../css/solution.scss'
-
-</style>
 <script>
   export default{
     components: {
     },
     data(){
       return {
-        banner:{backgroundImage:'url(' + require('../../../images/hotel/banner.jpg') + ')'},
-        scheme:{backgroundImage:'url(' + require('../../../images/hotel/scheme.jpg') + ')'},
-        demand:[
-          {backgroundImage:'url(' + require('../../../images/hotel/e1.png') + ')'},
-          {backgroundImage:'url(' + require('../../../images/hotel/e2.png') + ')'},
-          {backgroundImage:'url(' + require('../../../images/hotel/e3.png') + ')'},
-          {backgroundImage:'url(' + require('../../../images/hotel/e4.png') + ')'},
-        ],
-        bright:[
-          {backgroundImage:'url(' + require('../../../images/hotel/c1.png') + ')'},
-          {backgroundImage:'url(' + require('../../../images/hotel/c2.png') + ')'},
-          {backgroundImage:'url(' + require('../../../images/hotel/c3.png') + ')'},
-          {backgroundImage:'url(' + require('../../../images/hotel/c4.png') + ')'},
-        ],
-        example:[
-          {backgroundImage:'url(' + require('../../../images/hotel/d1.jpg') + ')'},
-          {backgroundImage:'url(' + require('../../../images/hotel/d2.jpg') + ')'},
-          {backgroundImage:'url(' + require('../../../images/hotel/d3.jpg') + ')'},
-        ]
-      }
+         banner:[{backgroundImage:'url(' + require('../../../../images/mindex/hotel/banner.jpg') + ')'}],
+         img:{backgroundImage:'url(' + require('../../../../images/mindex/hotel/d1.jpg') + ')'},
+         mdemand:[
+            {backgroundImage:require('../../../../images/mindex/hotel/b1.png')},
+            {backgroundImage:require('../../../../images/mindex/hotel/b2.png')},
+            {backgroundImage:require('../../../../images/mindex/hotel/b3.png')},
+            {backgroundImage:require('../../../../images/mindex/hotel/b4.png')}
+           ],
+         list:[
+            {backgroundImage:require('../../../../images/mindex/hotel/j1.png'),title:'成本',content:['融合终端形式覆盖','建设成本低']},
+            {backgroundImage:require('../../../../images/mindex/hotel/j2.png'),title:'安全',content:['满足公安上网要求']},
+            {backgroundImage:require('../../../../images/mindex/hotel/j3.png'),title:'盈利',content:['客户管理及营销','提供客户后台管理微信吸粉功能']},
+            {backgroundImage:require('../../../../images/mindex/hotel/j4.png'),title:'服务',content:['客房服务','周边信息推送','酒店营销']},
+           ],
+         casus:[
+            {backgroundImage:require('../../../../images/mindex/hotel/c1.png')},
+            {backgroundImage:require('../../../../images/mindex/hotel/c2.png')},
+            {backgroundImage:require('../../../../images/mindex/hotel/c3.png')},
+         ],
+       }
     },
     methods:{
       

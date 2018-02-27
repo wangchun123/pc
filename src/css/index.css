@@ -5,8 +5,7 @@ html {
 
 body {
   box-sizing: border-box;
-  height: 100%;
-  min-width: 1300px; }
+  height: 100%; }
 
 #index {
   height: 100%; }
@@ -677,7 +676,7 @@ nav {
   html {
     font-size: 12px; }
 
-  header,
+  #topHeader,
   .character,
   .framework,
   .footer {
@@ -691,7 +690,7 @@ nav {
 @media screen and (min-width: 1300px) and (max-width: 1600px) {
   html {
     font-size: 14px; }
-  header,
+  #topHeader,
   .character,
   .framework,
   .footer {
@@ -700,7 +699,7 @@ nav {
   html {
     font-size: 16px; }
 
-  header,
+  #topHeader,
   .character,
   .framework,
   .footer {

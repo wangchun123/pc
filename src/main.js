@@ -45,29 +45,6 @@ if(navigator.userAgent.search('Windows')!=-1){
   let fire = () => import('./components/homePageNavigation/solution/fire.vue')
   let help = () => import('./components/homePageNavigation/help.vue')
   let cooperation = () => import('./components/homePageNavigation/cooperation.vue')
-  /*import aboutUs from "./components/homePageNavigation/aboutUs.vue"
-  import web from './components/homePageNavigation/aboutUsMenu/web.vue'
-  import bigData from './components/homePageNavigation/aboutUsMenu/bigData.vue'
-  import dbaData from './components/homePageNavigation/aboutUsMenu/dbaData.vue'
-  import destManage from './components/homePageNavigation/aboutUsMenu/destManage.vue'
-  import itDesign from './components/homePageNavigation/aboutUsMenu/itDesign.vue'
-  import javaDesign from './components/homePageNavigation/aboutUsMenu/javaDesign.vue'
-  import move from './components/homePageNavigation/aboutUsMenu/move.vue'
-  import net from './components/homePageNavigation/aboutUsMenu/net.vue'
-  import workMan from './components/homePageNavigation/aboutUsMenu/workMan.vue'
-  import workManage from './components/homePageNavigation/aboutUsMenu/workManage.vue'
-
-  import OperationPlatform from "./components/homePageNavigation/OperationPlatform.vue"
-  import OpenPlatform from "./components/homePageNavigation/OpenPlatform.vue"
-  import VideoCloud from "./components/homePageNavigation/VideoCloud.vue"
-  import wisdom from "./components/homePageNavigation/wisdom.vue"
-
-  import hotel from "./components/homePageNavigation/solution/hotel.vue"
-  import meeting from "./components/homePageNavigation/solution/meeting.vue"
-  import city from "./components/homePageNavigation/solution/city.vue"
-  import fire from "./components/homePageNavigation/solution/fire.vue"
-  import help from "./components/homePageNavigation/help.vue"
-  import cooperation from "./components/homePageNavigation/cooperation.vue"*/
   const routes = [
     /*添加导航路由*/
     { path: '/index', component: container },//首页内容区域
@@ -100,7 +77,7 @@ if(navigator.userAgent.search('Windows')!=-1){
     {path:'/',redirect:'/index'} 
   ]
   const router = new VueRouter({
-    routes // （缩写）相当于 routes: routes 去看es6元一峰的
+    routes
   })
   new Vue({
     router,
@@ -110,11 +87,26 @@ if(navigator.userAgent.search('Windows')!=-1){
   })
 }else{
   let container = () => import('./mindex/components/container.vue')
+  let OperationPlatform = () => import('./mindex/components/homePageNavigation/OperationPlatform.vue')
+  let OpenPlatform = () => import('./mindex/components/homePageNavigation/OpenPlatform.vue')
+  let help = () => import('./mindex/components/homePageNavigation/help.vue')
+  let aboutUs = () => import('./mindex/components/homePageNavigation/aboutUs.vue')
+  let cooperation = () => import('./mindex/components/homePageNavigation/cooperation.vue')
+  let city = () => import('./mindex/components/homePageNavigation/solution/city.vue')
+  let hotel = () => import('./mindex/components/homePageNavigation/solution/hotel.vue')
+  let meeting = () => import('./mindex/components/homePageNavigation/solution/meeting.vue')
   const routes = [
     /*添加导航路由*/
     {path:'/',redirect:'/index'},
-    {path: '/index', component: container },//首页内容区域
-   
+    {path:'/index', component: container },//首页内容区域
+    {path:'/product/OperationPlatform', component: OperationPlatform },
+    {path:'/product/OpenPlatform', component: OpenPlatform },
+    {path:'/help',component:help},
+    {path:'/aboutUs',component:aboutUs},
+    {path:'/cooperation',component:cooperation},
+    {path:'/solution/city',component:city},
+    {path:'/solution/hotel',component:hotel},
+    {path:'/solution/meeting',component:meeting},
   ]
   const router = new VueRouter({
     routes 

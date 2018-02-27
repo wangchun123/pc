@@ -76,7 +76,7 @@
                     <div class="line"></div>
                     <span style="margin-left:20px">帮助文档</span>
             </div> 
-            <div style="height:100px;clear:both;width:1300px;margin:0 auto;text-decoration:underline;"><a href="" download="../../world/爱WiFi完美酒店FAQ--V1.2" style="margin-left:30px">爱WIFI业务FAQ</a></div>
+            <div style="height:100px;clear:both;width:1300px;margin:0 auto;text-decoration:underline;"><a href="" download="../../world/爱WiFi业务FAQ.pdf" style="margin-left:30px">爱WIFI业务FAQ</a></div>
             <div style="height:40px;"></div>
     </div>
 </template>
